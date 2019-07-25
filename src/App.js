@@ -1,26 +1,66 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import Navigation from './components/Navigation';
+import { Route } from 'react-router-dom';
+import Index from './pages/Index';
+import Cart from './pages/Cart';
+
+import {addToCart, addQuantity, subQuantity, remove, addShipping, subShipping} from './components/actions/cartActions';
+
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+class App extends Component {
+  render() {
+
+    return (
+      <div className="App">
+        <Navigation cart={this.props.cart} />
+        <Route 
+          path="/" 
+          exact 
+          render={(props) => 
+            <Index {...props} 
+              items={this.props.items} 
+              addToCart={this.props.addToCart} 
+            />
+          } 
+        />
+        <Route 
+          path="/cart" 
+          exact 
+          render={(props) => 
+            <Cart {...props} 
+              items={this.props.cart} 
+              addQuantity={this.props.addQuantity} 
+              subQuantity={this.props.subQuantity}
+              remove={this.props.remove}
+              total={this.props.total}
+              addShipping={this.props.addShipping}
+              subShipping={this.props.subShipping}
+            />
+          } 
+        />
+      </div>
+    );
+  }
 }
 
-export default App;
+const mapStateToProps = (state) => {
+  return {
+    items: state.items,
+    cart: state.cart,
+    total: state.total
+  }
+}
+const mapDispatchToProps = (dispatch) => {
+  return {
+    addToCart: (id) => {dispatch(addToCart(id))},
+    addQuantity: (id) => {dispatch(addQuantity(id))},
+    subQuantity: (id) => {dispatch(subQuantity(id))},
+    remove: (id) => {dispatch(remove(id))},
+    addShipping: (e) => {dispatch(addShipping(e))},
+    subShipping: (e) => {dispatch(subShipping(e))},
+  }
+} 
+export default connect(mapStateToProps,mapDispatchToProps)(App);

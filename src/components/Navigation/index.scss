@@ -1,0 +1,27 @@
+.nav-wrapper {
+    background:#ff7979;
+    box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.75);    
+    padding:20px 0;
+    &__brand-logo {
+        font-weight:800;
+        color:#fff;
+        &:hover {
+            color:#fff;
+        }
+    }
+    &__nav {
+        display:flex;
+        justify-content: space-between;
+        list-style: none;
+        padding-left:0;
+        margin-bottom:0;
+        li {
+            a {
+                color:#fff;
+                &:hover {
+                    color:#fff;
+                }
+            }
+        }
+    }
+}
