@@ -23,7 +23,7 @@
     "test": "react-scripts test",
     "test:nowatch": "CI=true react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "lint": "eslint src/**/*.js"
+    "lint": "eslint ./"
   },
   "eslintConfig": {
     "extends": "airbnb"

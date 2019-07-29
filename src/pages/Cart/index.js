@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import propTypes from 'prop-types';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { Container, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import Recipe from '../../components/Recipe';
@@ -7,44 +7,44 @@ import Recipe from '../../components/Recipe';
 import './index.scss';
 
 class Cart extends Component {
-
     handleAddQuantity = (id) => {
-        this.props.addQuantity(id);
+      this.props.addQuantity(id);
     }
+
     handleSubQuantity = (id) => {
-        this.props.subQuantity(id);
+      this.props.subQuantity(id);
     }
+
     handleRemove = (id) => {
-        this.props.remove(id);
+      this.props.remove(id);
     }
+
     render() {
-        let cart = this.props.items.length ?
-            (
-                this.props.items.map(item=>{
-                    return (
+      const cart = this.props.items.length
+        ? (
+          this.props.items.map(item => (
                         <li className="collection__item" key={item.id}>
                             <div className="collection__item__img">
-                                <img src={item.img} alt={this.props.title} />
+                                <img src={item.img} alt={item.title} />
                             </div>
                             <div className="collection__item__desc">
                                 <h3>{item.title}</h3>
                                 <p className="price">£{item.price}</p>
                                 <p className="quantity">Quantity: {item.quantity}</p>
                                 <div className="arrows">
-                                    <Link to="/cart" className="arrows__up" onClick={()=>{this.handleAddQuantity(item.id)}}></Link>
-                                    <Link to="/cart" className="arrows__down" onClick={()=>{this.handleSubQuantity(item.id)}}></Link>
+                                    <Link to="/cart" className="arrows__up" onClick={() => { this.handleAddQuantity(item.id); }}></Link>
+                                    <Link to="/cart" className="arrows__down" onClick={() => { this.handleSubQuantity(item.id); }}></Link>
                                 </div>
-                                <button className="remove" onClick={()=>{this.handleRemove(item.id)}}></button>
+                                <button className="remove" onClick={() => { this.handleRemove(item.id); }}></button>
                             </div>
-                            
+
                         </li>
-                    )
-                })
-            ):
-            (
+          ))
+        )
+        : (
                 <p>Nothing.</p>
-            )
-        return (
+        );
+      return (
             <section className="cart-page content">
                 <Container>
                     <Row>
@@ -59,26 +59,28 @@ class Cart extends Component {
                         </ul>
                     </Row>
                     <Row>
-                        {this.props.items.length >= 1 && <Recipe 
-                            total={this.props.total} 
+                        {this.props.items.length >= 1 && <Recipe
+                            total={this.props.total}
+                            shipping={this.props.shipping}
                             addShipping={this.props.addShipping}
                             subShipping={this.props.subShipping}
                         />}
-                        
+
                     </Row>
                 </Container>
             </section>
-        )        
+      );
     }
 }
 
 Cart.propTypes = {
-    items: propTypes.object,
-    addQuantity: propTypes.func,
-    subQuantity: propTypes.func,
-    remove: propTypes.func,
-    total: propTypes.number,
-    addShipping: propTypes.func,
-    subShipping: propTypes.func,
-}
+  items: PropTypes.object,
+  addQuantity: PropTypes.func,
+  subQuantity: PropTypes.func,
+  remove: PropTypes.func,
+  total: PropTypes.number,
+  shipping: PropTypes.bool,
+  addShipping: PropTypes.func,
+  subShipping: PropTypes.func,
+};
 export default Cart;

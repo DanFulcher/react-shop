@@ -1,18 +1,15 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { Container, Row, Col } from 'react-bootstrap';
 import Product from '../../components/Product';
 
 class Index extends Component {
-
-    render() {
-
-        let itemList = this.props.items.map(item=> {
-            return (
+  render() {
+    const itemList = this.props.items.map(item => (
                 <Product key={item.id} {...item} addToCart={this.props.addToCart} />
-            )
-        })
+    ));
 
-        return (
+    return (
             <section className="homepage content">
                 <Container>
                     <Row>
@@ -29,7 +26,12 @@ class Index extends Component {
                     </Container>
                 </div>
             </section>
-        )        
-    }
+    );
+  }
 }
+
+Index.propTypes = {
+  items: PropTypes.array,
+  addToCart: PropTypes.func,
+};
 export default Index;
