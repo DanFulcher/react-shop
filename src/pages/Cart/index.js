@@ -73,12 +73,12 @@ class Cart extends Component {
 }
 
 Cart.propTypes = {
-    items: propTypes.arrayOf(propTypes.object),
-    addQuantity: propTypes.func.isRequired,
-    subQuantity: propTypes.func.isRequired,
-    remove: propTypes.func.isRequired,
-    total: propTypes.number.isRequired,
-    addShipping: propTypes.func.isRequired,
-    subShipping: propTypes.func.isRequired,
+    items: propTypes.array,
+    addQuantity: propTypes.func,
+    subQuantity: propTypes.func,
+    remove: propTypes.func,
+    total: propTypes.number,
+    addShipping: propTypes.func,
+    subShipping: propTypes.func,
 }
 export default Cart;
