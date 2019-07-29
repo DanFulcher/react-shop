@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import propTypes from 'prop-types';
 import { Container, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import Recipe from '../../components/Recipe';
@@ -69,5 +70,15 @@ class Cart extends Component {
             </section>
         )        
     }
+}
+
+Cart.propTypes = {
+    items: propTypes.arrayOf(propTypes.object),
+    addQuantity: propTypes.func.isRequired,
+    subQuantity: propTypes.func.isRequired,
+    remove: propTypes.func.isRequired,
+    total: propTypes.number.isRequired,
+    addShipping: propTypes.func.isRequired,
+    subShipping: propTypes.func.isRequired,
 }
 export default Cart;
