@@ -79,7 +79,7 @@ const cartReducer = (state = initialState, action) => {
         return {
             ...state,
             cart: new_items,
-            totatl: newTotal
+            total: newTotal
         }
     } else if (action.type === addShipping) {
         return {
