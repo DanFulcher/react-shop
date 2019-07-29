@@ -7,7 +7,7 @@ import './index.scss';
 
 class Cart extends Component {
 
-    handleAddQuantity = (id) =>{
+    handleAddQuantity = (id) => {
         this.props.addQuantity(id);
     }
     handleSubQuantity = (id) => {
