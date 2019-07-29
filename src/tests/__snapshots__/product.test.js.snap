@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Product /> functions tests the Add To Cart function 1`] = `
+<ForwardRef
+  className="products__product"
+  md={4}
+>
+  <img
+    alt="Winter body"
+    src="../images/item1.jpg"
+  />
+  <h3>
+    Winter body
+  </h3>
+  <div
+    className="buttonHolder"
+  >
+    <button
+      className="button addToCart"
+      onClick={[Function]}
+      type="button"
+    />
+  </div>
+  <p
+    className="desc"
+  >
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.
+  </p>
+  <p
+    className="price"
+  >
+    <b>
+      £
+      110
+    </b>
+  </p>
+</ForwardRef>
+`;

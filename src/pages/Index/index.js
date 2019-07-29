@@ -8,7 +8,7 @@ class Index extends Component {
 
         let itemList = this.props.items.map(item=> {
             return (
-                <Product key={item.id} item={item} addToCart={this.props.addToCart} />
+                <Product key={item.id} {...item} addToCart={this.props.addToCart} />
             )
         })
 
