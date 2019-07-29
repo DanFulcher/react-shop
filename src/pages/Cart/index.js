@@ -73,7 +73,7 @@ class Cart extends Component {
 }
 
 Cart.propTypes = {
-    items: propTypes.array,
+    items: propTypes.object,
     addQuantity: propTypes.func,
     subQuantity: propTypes.func,
     remove: propTypes.func,
