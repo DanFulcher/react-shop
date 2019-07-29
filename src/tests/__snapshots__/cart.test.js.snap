@@ -1,0 +1,118 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Cart /> functions tests the Remove From Cart function 1`] = `
+<section
+  className="cart-page content"
+>
+  <ForwardRef
+    fluid={false}
+  >
+    <ForwardRef
+      noGutters={false}
+    >
+      <h1>
+        Cart
+      </h1>
+    </ForwardRef>
+    <ForwardRef
+      noGutters={false}
+    >
+      <h5>
+        You have ordered:
+      </h5>
+    </ForwardRef>
+    <ForwardRef
+      noGutters={false}
+    >
+      <ul
+        className="collection"
+      >
+        <p>
+          Nothing.
+        </p>
+      </ul>
+    </ForwardRef>
+    <ForwardRef
+      noGutters={false}
+    />
+  </ForwardRef>
+</section>
+`;
+
+exports[`<Cart /> functions tests the add quantity function 1`] = `
+<section
+  className="cart-page content"
+>
+  <ForwardRef
+    fluid={false}
+  >
+    <ForwardRef
+      noGutters={false}
+    >
+      <h1>
+        Cart
+      </h1>
+    </ForwardRef>
+    <ForwardRef
+      noGutters={false}
+    >
+      <h5>
+        You have ordered:
+      </h5>
+    </ForwardRef>
+    <ForwardRef
+      noGutters={false}
+    >
+      <ul
+        className="collection"
+      >
+        <p>
+          Nothing.
+        </p>
+      </ul>
+    </ForwardRef>
+    <ForwardRef
+      noGutters={false}
+    />
+  </ForwardRef>
+</section>
+`;
+
+exports[`<Cart /> functions tests the subtract quantity function 1`] = `
+<section
+  className="cart-page content"
+>
+  <ForwardRef
+    fluid={false}
+  >
+    <ForwardRef
+      noGutters={false}
+    >
+      <h1>
+        Cart
+      </h1>
+    </ForwardRef>
+    <ForwardRef
+      noGutters={false}
+    >
+      <h5>
+        You have ordered:
+      </h5>
+    </ForwardRef>
+    <ForwardRef
+      noGutters={false}
+    >
+      <ul
+        className="collection"
+      >
+        <p>
+          Nothing.
+        </p>
+      </ul>
+    </ForwardRef>
+    <ForwardRef
+      noGutters={false}
+    />
+  </ForwardRef>
+</section>
+`;

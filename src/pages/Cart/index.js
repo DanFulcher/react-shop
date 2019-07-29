@@ -7,7 +7,7 @@ import './index.scss';
 
 class Cart extends Component {
 
-    hanldeAddQuantity = (id) =>{
+    handleAddQuantity = (id) =>{
         this.props.addQuantity(id);
     }
     handleSubQuantity = (id) => {
@@ -30,7 +30,7 @@ class Cart extends Component {
                                 <p className="price">£{item.price}</p>
                                 <p className="quantity">Quantity: {item.quantity}</p>
                                 <div className="arrows">
-                                    <Link to="/cart" className="arrows__up" onClick={()=>{this.hanldeAddQuantity(item.id)}}></Link>
+                                    <Link to="/cart" className="arrows__up" onClick={()=>{this.handleAddQuantity(item.id)}}></Link>
                                     <Link to="/cart" className="arrows__down" onClick={()=>{this.handleSubQuantity(item.id)}}></Link>
                                 </div>
                                 <button className="remove" onClick={()=>{this.handleRemove(item.id)}}></button>
