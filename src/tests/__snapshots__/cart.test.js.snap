@@ -27,14 +27,72 @@ exports[`<Cart /> functions tests the Remove From Cart function 1`] = `
       <ul
         className="collection"
       >
-        <p>
-          Nothing.
-        </p>
+        <li
+          className="collection__item"
+        >
+          <div
+            className="collection__item__img"
+          >
+            <img
+              alt="Winter body"
+              src="../images/item1.jpg"
+            />
+          </div>
+          <div
+            className="collection__item__desc"
+          >
+            <h3>
+              Winter body
+            </h3>
+            <p
+              className="price"
+            >
+              £110
+            </p>
+            <p
+              className="quantity"
+            >
+              Quantity: undefined
+            </p>
+            <div
+              className="arrows"
+            >
+              <a
+                href="#"
+                onClick={[Function]}
+              >
+                <i
+                  className="arrows__up"
+                />
+              </a>
+              <a
+                href="#"
+                onClick={[Function]}
+              >
+                <i
+                  className="arrows__down"
+                />
+              </a>
+            </div>
+            <button
+              className="remove"
+              onClick={[Function]}
+              type="button"
+            />
+          </div>
+        </li>
       </ul>
     </ForwardRef>
     <ForwardRef
       noGutters={false}
-    />
+    >
+      <Recipe
+        addShipping={[Function]}
+        shipping={false}
+        subShipping={[Function]}
+        total={0}
+      />
+    </ForwardRef>
   </ForwardRef>
 </section>
 `;
@@ -66,14 +124,72 @@ exports[`<Cart /> functions tests the add quantity function 1`] = `
       <ul
         className="collection"
       >
-        <p>
-          Nothing.
-        </p>
+        <li
+          className="collection__item"
+        >
+          <div
+            className="collection__item__img"
+          >
+            <img
+              alt="Winter body"
+              src="../images/item1.jpg"
+            />
+          </div>
+          <div
+            className="collection__item__desc"
+          >
+            <h3>
+              Winter body
+            </h3>
+            <p
+              className="price"
+            >
+              £110
+            </p>
+            <p
+              className="quantity"
+            >
+              Quantity: undefined
+            </p>
+            <div
+              className="arrows"
+            >
+              <a
+                href="#"
+                onClick={[Function]}
+              >
+                <i
+                  className="arrows__up"
+                />
+              </a>
+              <a
+                href="#"
+                onClick={[Function]}
+              >
+                <i
+                  className="arrows__down"
+                />
+              </a>
+            </div>
+            <button
+              className="remove"
+              onClick={[Function]}
+              type="button"
+            />
+          </div>
+        </li>
       </ul>
     </ForwardRef>
     <ForwardRef
       noGutters={false}
-    />
+    >
+      <Recipe
+        addShipping={[Function]}
+        shipping={false}
+        subShipping={[Function]}
+        total={0}
+      />
+    </ForwardRef>
   </ForwardRef>
 </section>
 `;
@@ -105,14 +221,72 @@ exports[`<Cart /> functions tests the subtract quantity function 1`] = `
       <ul
         className="collection"
       >
-        <p>
-          Nothing.
-        </p>
+        <li
+          className="collection__item"
+        >
+          <div
+            className="collection__item__img"
+          >
+            <img
+              alt="Winter body"
+              src="../images/item1.jpg"
+            />
+          </div>
+          <div
+            className="collection__item__desc"
+          >
+            <h3>
+              Winter body
+            </h3>
+            <p
+              className="price"
+            >
+              £110
+            </p>
+            <p
+              className="quantity"
+            >
+              Quantity: undefined
+            </p>
+            <div
+              className="arrows"
+            >
+              <a
+                href="#"
+                onClick={[Function]}
+              >
+                <i
+                  className="arrows__up"
+                />
+              </a>
+              <a
+                href="#"
+                onClick={[Function]}
+              >
+                <i
+                  className="arrows__down"
+                />
+              </a>
+            </div>
+            <button
+              className="remove"
+              onClick={[Function]}
+              type="button"
+            />
+          </div>
+        </li>
       </ul>
     </ForwardRef>
     <ForwardRef
       noGutters={false}
-    />
+    >
+      <Recipe
+        addShipping={[Function]}
+        shipping={false}
+        subShipping={[Function]}
+        total={0}
+      />
+    </ForwardRef>
   </ForwardRef>
 </section>
 `;

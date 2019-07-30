@@ -1,32 +1,32 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { Col } from 'react-bootstrap';
 
 import './index.scss';
 
-class Product extends Component {
-    handleClick = () => {
-      this.props.addToCart(this.props.id);
-    }
+const Product = ({
+  id, img, title, desc, price, addToCart,
+}) => {
+  const handleClick = () => {
+    addToCart(id);
+  };
+  return (
+    <Col className="products__product" md={4}>
+      <img src={img} alt={title} />
+      <h3>{title}</h3>
+      <div className="buttonHolder">
+        <button type="button" className="button addToCart" onClick={handleClick} />
+      </div>
+      <p className="desc">{desc}</p>
+      <p className="price">
+        <b>
+          {`£${price}`}
+        </b>
+      </p>
+    </Col>
+  );
+};
 
-    render() {
-      return (
-            <Col className="products__product" md={4}>
-                <img src={this.props.img} alt={this.props.title} />
-                <h3>{this.props.title}</h3>
-                <div className="buttonHolder">
-                    <button type='button' className="button addToCart" onClick={this.handleClick}>
-                    </button>
-                </div>
-                <p className="desc">{this.props.desc}</p>
-                <p className="price">
-                    <b>£{this.props.price}</b>
-                </p>
-
-            </Col>
-      );
-    }
-}
 
 Product.propTypes = {
   id: PropTypes.number.isRequired,

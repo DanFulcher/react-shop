@@ -13,9 +13,8 @@ describe('<Product /> functions', () => {
     };
 
     const wrapper = renderer.create(<Product {...item} addToCart={addToCart} />);
-    const inst = wrapper.getInstance();
-    expect(inst.render()).toMatchSnapshot();
+    expect(wrapper.toJSON()).toMatchSnapshot();
 
-    inst.handleClick();
+    wrapper.root.props.addToCart(1);
   });
 });

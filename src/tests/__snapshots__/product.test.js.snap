@@ -1,9 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Product /> functions tests the Add To Cart function 1`] = `
-<ForwardRef
-  className="products__product"
-  md={4}
+<div
+  className="products__product col-md-4"
 >
   <img
     alt="Winter body"
@@ -30,9 +29,8 @@ exports[`<Product /> functions tests the Add To Cart function 1`] = `
     className="price"
   >
     <b>
-      £
-      110
+      £110
     </b>
   </p>
-</ForwardRef>
+</div>
 `;

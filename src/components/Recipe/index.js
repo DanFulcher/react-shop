@@ -3,35 +3,46 @@ import PropTypes from 'prop-types';
 
 class Recipe extends Component {
   componentWillUnmount() {
-    if (this.props.shipping === false) {
-      this.props.subShipping();
+    const { shipping, subShipping } = this.props;
+
+    if (shipping === false) {
+      subShipping();
     }
   }
 
     handleChecked = (e) => {
+      const { addShipping, subShipping } = this.props;
       if (e.target.checked) {
-        this.props.addShipping();
+        addShipping();
       } else {
-        this.props.subShipping();
+        subShipping();
       }
     }
 
     render() {
+      const { total } = this.props;
       return (
-            <section className="recipe">
-                <label>Shipping (£6)</label>
-                <input type="checkbox" onChange={this.handleChecked}/>
-                <h2>Total: £{this.props.total}</h2>
-            </section>
+        <section className="recipe">
+          <label htmlFor="checkbox">Shipping (£6)</label>
+          <input type="checkbox" id="checkbox" onChange={this.handleChecked} />
+          <h2>
+            {`Total: £${total}`}
+          </h2>
+        </section>
       );
     }
 }
 
 Recipe.propTypes = {
   shipping: PropTypes.bool,
-  subShipping: PropTypes.func,
-  addShipping: PropTypes.func,
+  subShipping: PropTypes.func.isRequired,
+  addShipping: PropTypes.func.isRequired,
   total: PropTypes.number,
+};
+
+Recipe.defaultProps = {
+  shipping: false,
+  total: 0,
 };
 
 export default Recipe;
